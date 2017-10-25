@@ -2,6 +2,9 @@ import * as React from "react";
 import {inject, observer} from "mobx-react";
 import {AppState} from "../store/index";
 import DevTools from "mobx-react-devtools";
+import StreamerSearchBar from "./StreamerSearchBar";
+import StreamerList from "./StreamerList";
+import "./App.css";
 
 interface AppProps {
     appState?: AppState;
@@ -17,11 +20,10 @@ class App extends React.Component<AppProps, {}> {
 
     render() {
         return (
-            <div>
+            <div className="app">
                 <DevTools/>
-                <pre>
-                    {JSON.stringify(this.props.appState!.streamers)}
-                </pre>
+                <StreamerSearchBar/>
+                <StreamerList/>
             </div>
         );
     }

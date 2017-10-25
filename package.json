@@ -23,9 +23,9 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
-    "@types/jest": "^21.1.1",
-    "@types/lodash": "^4.14.77",
-    "@types/node": "^8.0.31",
+    "@types/jest": "^21.1.5",
+    "@types/lodash": "^4.14.79",
+    "@types/node": "^8.0.47",
     "@types/react": "^16.0.7",
     "@types/react-dom": "^16.0.1",
     "gh-pages": "^1.0.0",

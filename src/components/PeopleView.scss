@@ -1,0 +1,60 @@
+@import "styles/common.scss";
+
+.people-view {
+  @include btn;
+  @include button-outline-variant(theme-color("secondary"));
+  white-space: normal;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: left;
+  break-inside: avoid-column;
+  margin-bottom: 1rem;
+
+  &--active {
+    @include button-variant(theme-color("success"), theme-color("success"));
+  }
+
+  &__img {
+    border-radius: 100%;
+    width: 20%;
+    height: 20%;
+    flex: 0 0 20%;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-self: stretch;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    flex: 1;
+    padding: 2% 4%;
+    min-width: 0;
+    text-overflow: ellipsis;
+  }
+
+  &__title {
+    margin-bottom: 0;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__subtitle {
+    font-style: italic;
+    font-weight: 300;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    margin-bottom: 0.25rem;
+    white-space: nowrap;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1rem;
+    }
+  }
+}

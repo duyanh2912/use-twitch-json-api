@@ -3,6 +3,10 @@ import {fetchUsers, Streamer} from "./api";
 
 useStrict(true);
 
+export interface Injected {
+    appState?: AppState;
+}
+
 export class AppState {
     @observable streamers: Streamer[] = [];
 

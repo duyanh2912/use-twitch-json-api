@@ -1,0 +1,9 @@
+@import "styles/common.scss";
+
+.streamer-list {
+  column-count: 1;
+
+  @include media-breakpoint-up(md) {
+    column-count: 2;
+  }
+}

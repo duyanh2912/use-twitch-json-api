@@ -5,7 +5,7 @@ export interface Streamer {
     picUrl: string;
 }
 
-const endPoint = "https://wind-bow.gomix.me/twitch-api";
+const endPoint = "https://wind-bow.glitch.me/twitch-api";
 
 export const fetchUsers = async (names: string[]): Promise<Streamer[]> => {
     const promises = names
