@@ -69,7 +69,7 @@
   .people-view__img {
     border-radius: 100%;
     width: 20%;
-    height: 20%;
+    height: auto;
     flex: 0 0 20%; }
   .people-view__info {
     display: flex;
@@ -98,3 +98,43 @@
     @media (max-width: 991px) {
       .people-view__subtitle {
         font-size: 1rem; } }
+
+.people-view--loading .people-view__title {
+  width: 50%;
+  height: 2.1rem;
+  background-color: #ddd;
+  animation-name: flashing;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; }
+  @media (max-width: 991px) {
+    .people-view--loading .people-view__title {
+      height: 1.44rem; } }
+
+.people-view--loading .people-view__subtitle {
+  height: 1.5rem;
+  width: 100%;
+  background-color: #ddd;
+  animation-name: flashing;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; }
+
+.people-view--loading .people-view__img {
+  padding-top: 20%;
+  background-color: #ddd;
+  animation-name: flashing;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; }
+
+@keyframes flashing {
+  0% {
+    background-color: #eee; }
+  50% {
+    background-color: #ddd; }
+  100% {
+    background-color: #eee; } }

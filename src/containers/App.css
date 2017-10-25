@@ -2,7 +2,8 @@
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+  margin-top: 3rem; }
   @media (min-width: 576px) {
     .app {
       max-width: 540px; } }
@@ -15,3 +16,7 @@
   @media (min-width: 1200px) {
     .app {
       max-width: 1140px; } }
+
+.app h1 {
+  text-align: center;
+  margin-bottom: 2rem; }

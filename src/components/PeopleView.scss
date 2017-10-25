@@ -19,7 +19,7 @@
   &__img {
     border-radius: 100%;
     width: 20%;
-    height: 20%;
+    height: auto;
     flex: 0 0 20%;
   }
 
@@ -56,5 +56,51 @@
     @include media-breakpoint-down(md) {
       font-size: 1rem;
     }
+  }
+}
+
+@mixin flashing-anim() {
+  animation-name: flashing;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.people-view--loading {
+  .people-view {
+    &__title {
+      width: 50%;
+      height: 1.2 * 1.75rem;
+      background-color: #ddd;
+      @include flashing-anim;
+
+      @include media-breakpoint-down(md) {
+        height: 1.2 * 1.2rem;
+      }
+    }
+    &__subtitle {
+      height: 1.5rem;
+      width: 100%;
+      background-color: #ddd;
+      @include flashing-anim;
+    }
+    &__img {
+      padding-top: 20%;
+      background-color: #ddd;
+      @include flashing-anim;
+    }
+  }
+}
+
+@keyframes flashing {
+  0% {
+    background-color: #eee;
+  }
+  50% {
+    background-color: #ddd;
+  }
+  100% {
+    background-color: #eee;
   }
 }

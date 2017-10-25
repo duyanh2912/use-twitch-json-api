@@ -2,7 +2,6 @@ import * as React from "react";
 import {inject, observer} from "mobx-react";
 import {AppState} from "../store/index";
 import DevTools from "mobx-react-devtools";
-import StreamerSearchBar from "./StreamerSearchBar";
 import StreamerList from "./StreamerList";
 import "./App.css";
 
@@ -22,7 +21,7 @@ class App extends React.Component<AppProps, {}> {
         return (
             <div className="app">
                 <DevTools/>
-                <StreamerSearchBar/>
+                <h1>Twitch JSON API</h1>
                 <StreamerList/>
             </div>
         );
